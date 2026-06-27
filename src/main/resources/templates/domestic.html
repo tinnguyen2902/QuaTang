@@ -1,10 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quà Tặng Trong Nước - Thương Hiệu Việt Cao Cấp</title>
+  <link rel="stylesheet" th:href="@{/css/domestic.css}">
 </head>
 <body>
-$END$
+
+<!-- ================= PHẦN 1 ================= -->
+<header class="dom-header">
+  <div class="header-top-bar">
+    <div class="logo-box">[ LOGO WEB ]</div>
+
+    <!-- Tìm kiếm theo Hệ Thống Thương Hiệu hoặc Sản Phẩm -->
+    <div class="search-box">
+      <input type="text" placeholder="Nhập tên thương hiệu Việt (Gốm Bát Tràng, Cafe Trung Nguyên...) hoặc sản phẩm...">
+      <button type="button">Tìm kiếm</button>
+    </div>
+  </div>
+
+  <nav class="dom-nav">
+    <div class="nav-item">
+      <span class="nav-title">🔥 Sản phẩm quốc dân bán chạy</span>
+      <div class="nav-tags">
+        <a href="#">Hộp quà Tết sum vầy</a>
+        <a href="#">Set quà tặng doanh nghiệp</a>
+        <a href="#">Giỏ quà sức khỏe (Yến sào, Nhân sâm)</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <span class="nav-title">⭐ Thương hiệu được chọn lựa (Hàng VNCLC)</span>
+      <div class="nav-tags">
+        <a href="#">Gốm Sứ Minh Long</a>
+        <a href="#">Yến Sào Khánh Hòa</a>
+        <a href="#">Cà Phê Legend</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= PHẦN 2 ================= -->
+<main class="dom-main">
+  <!-- Banner tổng hợp toàn quốc -->
+  <section class="ad-banner-section">
+    <div class="large-banner-placeholder">
+      <h3>[ BANNER QUẢNG CÁO SELECTION & NGHỆ THUẬT TẶNG QUÀ ]</h3>
+      <p>Hướng dẫn chọn quà tinh tế cho đối tác, sếp và gia đình. Miễn phí thiệp viết tay và đóng gói cao cấp.</p>
+    </div>
+  </section>
+
+  <!-- Lễ hội toàn quốc theo tháng/mùa -->
+  <section class="festival-section">
+    <h2>🎉 Lễ Tiết & Mùa Quà Tặng Lớn Trong Năm</h2>
+    <div class="festival-grid">
+      <div class="festival-card">
+        <h4>🧧 Mùa Đầu Năm (Tháng 1 - 2)</h4>
+        <p><strong>Tết Nguyên Đán, Valentine:</strong> Mùa đoàn viên và tình yêu. Gợi ý: Hộp quà bánh mứt truyền thống, hộp quà Socola tình nhân.</p>
+      </div>
+      <div class="festival-card">
+        <h4>👩 Mùa Tri Ân (Tháng 3 & Tháng 10)</h4>
+        <p><strong>Ngày Quốc tế Phụ nữ 8/3, VN 20/10:</strong> Tôn vinh phái đẹp. Gợi ý: Set quà tặng hoa tươi, mỹ phẩm, hoặc khăn lụa tơ tằm.</p>
+      </div>
+      <div class="festival-card">
+        <h4>🥮 Mùa Đoàn Viên (Tháng 8 - 9)</h4>
+        <p><strong>Tết Trung Thu:</strong> Lễ hội trăng rằm. Gợi ý: Các dòng bánh Trung Thu cao cấp kết hợp với trà thượng hạng.</p>
+      </div>
+      <div class="festival-card">
+        <h4>👨‍🏫 Mùa Biết Ơn (Tháng 11 - 12)</h4>
+        <p><strong>Ngày Nhà Giáo 20/11, Tri ân đối tác:</strong> Gợi ý: Set bút ký sang trọng, sổ da, hoặc các giỏ quà hạt dinh dưỡng cheo góc cuối năm.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= PHẦN 3 ================= -->
+<footer class="dom-footer">
+  <div class="recommendation-grid">
+    <div class="rec-column">
+      <h3>📦 Sản phẩm đề xuất toàn quốc</h3>
+      <ul>
+        <li>🎁 Hộp Quà Sức Khỏe Premium (Yến sào + Táo đỏ)</li>
+        <li>🎁 Bộ tách trà gốm sứ vẽ vàng 24k</li>
+        <li>🎁 Cặp da cao cấp thiết kế công sở</li>
+      </ul>
+    </div>
+    <div class="rec-column">
+      <h3>🏪 Shop đề xuất</h3>
+      <ul>
+        <li>Gợi ý 1: Vietnam Gift Mall (Bán chạy nhất hệ thống)</li>
+        <li>Gợi ý 2: Đại Lý Phân Phối Quà Tặng Doanh Nghiệp Toàn Quốc</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="summary-categories">
+    <h3>🗂️ Danh mục phân loại Quà tặng Trong nước</h3>
+    <div class="category-table-placeholder">
+      <p>[ BẢNG PHÂN LOẠI QUÀ TẶNG THEO TIÊU CHÍ VÀ ĐỐI TƯỢNG ]</p>
+      <div class="category-links">
+        <span><strong>Theo đối tượng:</strong> Quà tặng Bố Mẹ, Quà tặng Người yêu, Quà tặng Sếp, Quà tặng Đồng nghiệp</span><br>
+        <span><strong>Theo ngân sách:</strong> Quà tặng Tiết kiệm (&lt;300k), Quà tầm trung (300k - 1tr), Quà tặng Cao cấp (&gt;1tr)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Chuyên mục Quà Tặng Trong Nước - Website Quà Tặng.
+  </div>
+</footer>
+
 </body>
 </html>

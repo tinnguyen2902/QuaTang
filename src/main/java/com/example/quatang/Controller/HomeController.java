@@ -1,4 +1,4 @@
-package com.example.quatang.Controller;
+package com.example.quatang.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

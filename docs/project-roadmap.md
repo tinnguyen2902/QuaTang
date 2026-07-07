@@ -7,6 +7,7 @@ Dự án phát triển nền tảng thương mại điện tử QuaTang được
 - Định nghĩa Database Schema (ERD).
 - Khởi tạo JPA Entities & Repositories.
 - Tích hợp các dependencies cần thiết (JPA, Security, Validation).
+- Cấu hình Flyway Migration & Baseline Data.
 
 ## Phase 2: Product Listing & Detail (🔲 Planned)
 - Xây dựng layout Master/Fragment bằng Thymeleaf.

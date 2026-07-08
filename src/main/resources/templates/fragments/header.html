@@ -4,27 +4,45 @@
 
 <header th:fragment="header">
     <div class="header-top">
+        <!-- Khối 1: Logo nằm độc lập bên trái -->
         <div class="logo-placeholder">
             [ LOGO WEB ]
         </div>
+        <div class="header-right-group">
 
-        <div class="search-bar">
-            <select name="category" id="category">
-                <option value="">Tất cả danh mục</option>
-                <option value="sinh-nhat">Quà sinh nhật</option>
-                <option value="le-ky-niem">Quà kỷ niệm</option>
-                <option value="van-phong">Đồ lưu niệm văn phòng</option>
-            </select>
-            <input type="text" placeholder="Nhập tên sản phẩm cần tìm...">
-            <button type="button">Tìm kiếm</button>
-        </div>
+            <!-- Thanh tìm kiếm -->
+            <div class="search-bar">
+                <select name="category" id="category">
+                    <option value="">Tất cả danh mục</option>
+                    <option value="sinh-nhat">Quà sinh nhật</option>
+                    <option value="le-ky-niem">Quà kỷ niệm</option>
+                    <option value="van-phong">Đồ lưu niệm văn phòng</option>
+                </select>
+                <input type="text" placeholder="Nhập tên sản phẩm cần tìm...">
+                <button type="button">Tìm kiếm</button>
+            </div>
 
-        <ul class="header-menu">
-            <li><a href="#khuyen-mai">🎟️ Mã khuyến mãi</a></li>
-            <li><a href="#thong-bao">🔔 Thông báo</a></li>
-            <li><a href="#yeu-thich">❤️ Sản phẩm yêu thích</a></li>
-            <li><a href="#gio-hang">🛒 Giỏ hàng</a></li>
-        </ul>
+            <!-- Cụm 4 nút tiện ích -->
+            <div class="header-menu">
+                <a href="#khuyen-mai" class="action-item" title="Mã khuyến mãi">
+                    <span class="action-icon">🎟️</span>
+                    <span class="action-text">Mã khuyến mãi</span>
+                </a>
+                <a href="#thong-bao" class="action-item" title="Thông báo">
+                    <span class="action-icon">🔔</span>
+                    <span class="action-text">Thông báo</span>
+                </a>
+                <a href="#yeu-thich" class="action-item" title="Sản phẩm yêu thích">
+                    <span class="action-icon">❤️</span>
+                    <span class="action-text">Sản phẩm yêu thích</span>
+                </a>
+                <a href="#gio-hang" class="action-item" title="Giỏ hàng">
+                    <span class="action-icon">🛒</span>
+                    <span class="action-text">Giỏ hàng</span>
+                </a>
+            </div>
+
+        </div> <!-- Kết thúc thẻ bọc cụm bên phải -->
     </div>
 
     <div class="header-history">

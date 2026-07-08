@@ -292,3 +292,333 @@
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
+/* ================= TÁI LẬP CHO TRANG CHI TIẾT ================= */
+.guide-main-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 1. BREADCRUMB */
+.breadcrumb {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.breadcrumb a {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: #780000;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+}
+
+.breadcrumb .active {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* 2. KHỐI GIỚI THIỆU TỔNG QUAN (ẢNH TRÁI - CHỮ PHẢI) */
+.product-intro-section {
+    display: flex;
+    gap: 40px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 30px;
+}
+
+.product-gallery {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-image {
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-weight: 700;
+    border: 1px solid #cbd5e1;
+}
+
+.thumb-images {
+    display: flex;
+    gap: 10px;
+}
+
+.thumb-item {
+    flex: 1;
+    height: 70px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.thumb-item.active {
+    border-color: #780000;
+    background-color: #fdf0ed;
+}
+
+.product-short-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.badge-category {
+    background-color: #fdf0ed;
+    color: #780000;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+
+.product-short-info h1 {
+    font-size: 26px;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.product-status {
+    font-size: 13.5px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.short-description {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-buy-now-detail {
+    background-color: #780000;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    font-weight: 700;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(120, 0, 0, 0.15);
+    transition: background 0.2s;
+}
+
+.btn-buy-now-detail:hover {
+    background-color: #c1121f;
+}
+
+/* 3. KHỐI NỘI DUNG CHI TIẾT CHIA BIÊN */
+.tabs-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.guide-content-left {
+    flex: 7;
+}
+
+.guide-block {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 25px;
+}
+
+.guide-block h2 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.guide-block p {
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* List số thứ tự các bước */
+.step-list {
+    padding-left: 20px;
+}
+
+.step-list li {
+    font-size: 14.5px;
+    color: #475569;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* Hộp cảnh báo lưu ý */
+.warning-box {
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.warning-box p {
+    margin: 0;
+    color: #991b1b;
+    font-size: 13.5px;
+}
+
+.bullet-list {
+    padding-left: 20px;
+}
+
+.bullet-list li {
+    font-size: 14.5px;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+/* Khung video giả lập */
+.video-container-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #0f172a; /* Nền đen của video */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.play-button {
+    background-color: #ef4444;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    transition: transform 0.2s;
+}
+
+.video-container-placeholder:hover .play-button {
+    transform: scale(1.08);
+}
+
+/* 4. CỘT PHẢI - THÔNG SỐ BẢNG KỸ THUẬT */
+.specs-sidebar-right {
+    flex: 3;
+    position: sticky;
+    top: 20px;
+}
+
+.specs-card, .commit-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.specs-card h3 {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #1e293b;
+    text-transform: uppercase;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+
+.specs-table td {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.specs-table td:first-child {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.specs-table td:last-child {
+    color: #1e293b;
+    font-weight: 600;
+    text-align: right;
+}
+
+.commit-card h4 {
+    margin-top: 0;
+    font-size: 14px;
+    color: #10b981; /* Màu cam kết xanh an toàn */
+    margin-bottom: 12px;
+}
+
+.commit-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.commit-card li {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.commit-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: 700;
+}
+
+/* ================= ĐÁP ỨNG DI ĐỘNG (RESPONSIVE) ================= */
+@media (max-width: 850px) {
+    .product-intro-section {
+        flex-direction: column;
+    }
+    .tabs-wrapper {
+        flex-direction: column;
+    }
+    .guide-content-left, .specs-sidebar-right {
+        width: 100%;
+    }
+    .specs-sidebar-right {
+        position: static;
+    }
+}

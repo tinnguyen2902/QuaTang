@@ -1,142 +1,288 @@
-/* CSS Hệ thống & Thiết lập chung (Dùng chung cho mọi trang) */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #333;
-}
-
-header, main, footer {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-divider {
-    border: 0;
-    border-top: 1px solid #ddd;
-    margin: 20px 0;
-}
-
-/* ================= ĐỊNH DẠNG PHẦN ĐẦU (HEADER) ================= */
+/* Khung cha ngoài cùng */
 .header-top {
+    display: flex;
+    justify-content: space-between; /* Đẩy Logo sang trái, Cụm Group sang phải */
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo-placeholder {
+    flex-shrink: 0;
+}
+
+/* 🚀 ĐỊNH DẠNG CHO KHỐI BỌC MỚI */
+.header-right-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;        /* Khoảng cách giữa Thanh tìm kiếm và Cụm Icon */
+    flex-grow: 1;     /* Cho phép chiếm phần diện tích còn lại */
+    justify-content: flex-end; /* Đẩy tất cả nội dung bên trong về sát lề phải */
+}
+
+/* Thanh tìm kiếm */
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    max-width: 550px; /* Định độ rộng hợp lý cho ô tìm kiếm */
+}
+
+/* Cụm 4 Icon */
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;       /* Khoảng cách giữa các icon với nhau */
+    flex-shrink: 0;   /* Không cho icon bị bóp méo khi thu nhỏ màn hình */
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.action-icon {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+/*Footer*/
+/* ================= CSS CHUẨN CHO FOOTER BÁN HÀNG ================= */
+footer {
+    background-color: #0f172a; /* Nền tối sang trọng, đúng chuẩn các ông lớn e-commerce */
+    color: #cbd5e1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 !important; /* Reset padding để bọc các khối con */
+    margin-top: 60px;
+}
+
+/* 1. Khối Đăng ký nhận tin */
+.footer-newsletter {
+    background-color: #1e293b;
+    padding: 30px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
+    border-bottom: 1px solid #334155;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.logo-placeholder {
-    width: 150px;
-    height: 50px;
-    background-color: #eee;
+.newsletter-content h3 {
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.newsletter-content p {
+    color: #94a3b8;
+    margin: 0;
+    font-size: 14px;
+}
+
+.newsletter-form {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed #ccc;
-    font-weight: bold;
+    width: 100%;
+    max-width: 400px;
 }
 
-.search-bar {
+.newsletter-form input {
     flex-grow: 1;
-    max-width: 500px;
-    display: flex;
-    gap: 10px;
-}
-
-.search-bar input, .search-bar select, .search-bar button {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.search-bar input {
-    flex-grow: 1;
-}
-
-.search-bar button {
-    background-color: #007bff;
+    padding: 12px 15px;
+    border: 1px solid #475569;
+    border-right: none;
+    background-color: #0f172a;
     color: white;
-    cursor: pointer;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+}
+
+.newsletter-form button {
+    padding: 12px 25px;
+    background-color: #780000; /* Màu đỏ đô thương hiệu của bạn */
+    color: white;
     border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.2s ease;
 }
 
-.search-bar button:hover {
-    background-color: #0056b3;
+.newsletter-form button:hover {
+    background-color: #c1121f;
 }
 
-.header-menu {
-    display: flex;
-    gap: 15px;
+/* 2. Khối nội dung Grid 4 cột */
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Đường gạch chân trang trí nhẹ dưới tiêu đề */
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #e1d1d1;
+}
+
+/* Cấu hình các danh sách liên kết */
+.footer-links, .footer-stores {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.header-menu a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.header-menu a:hover {
-    text-decoration: underline;
-}
-
-.header-history {
-    margin-top: 15px;
+.footer-links li {
+    margin-bottom: 12px;
     font-size: 14px;
-    color: #666;
+}
+/* Tìm đến đoạn này và thay thế bằng đoạn code dưới đây */
+.footer-links a {
+    color: #ffffff;          /* ⚪ Đổi màu chữ thành màu trắng tinh */
+    text-decoration: none;   /* 🚫 Bỏ dấu gạch chân bên dưới chữ */
+    transition: all 0.2s ease;
+}
+
+/* Hiệu ứng khi di chuột (Hover) vào chữ */
+.footer-links a:hover {
+    color: #f6ad55;          /* Đổi sang màu vàng cam (hoặc màu bạn thích) khi di chuột vào để khách biết là click được */
+    padding-left: 5px;       /* Hiệu ứng nhích nhẹ chữ sang phải tạo cảm giác mượt mà */
+    text-decoration: none;   /* Đảm bảo khi hover vào cũng không bị hiện lại gạch chân */
+}
+
+
+/* Khối hệ thống cửa hàng */
+.footer-stores li {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #e2e8f0;
+}
+
+.store-sub {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-left: 24px;
+}
+
+/* Khối liên hệ */
+.contact-info p {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    color: #94a3b8;
+}
+
+.contact-info .brand-name {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.highlight-phone {
+    color: #f6ad55; /* Màu cam vàng nổi bật cho hotline chăm sóc khách hàng */
+    font-weight: 700;
+}
+
+/* 3. Khối thanh toán & Mạng xã hội & Copyright */
+.footer-bottom {
+    background-color: #020617; /* Khối đáy tối hẳn xuống để phân ranh giới */
+    padding: 30px 20px;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1e293b;
+    font-size: 13px;
+    color: #64748b;
 }
 
-.history-link {
-    color: #666;
+.social-icon {
+    color: #94a3b8;
     text-decoration: none;
+    margin-left: 12px;
+    transition: color 0.2s ease;
 }
 
-.history-link:hover {
-    color: #333;
-    text-decoration: underline;
-}
+.social-icon:hover { color: #fff; }
 
-/* ================= ĐỊNH DẠNG PHẦN KẾT (FOOTER) ================= */
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-}
-
-.footer-section h3 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-    margin-top: 0;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-section a {
-    color: #333;
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    color: #007bff;
-    text-decoration: underline;
+.pay-badge {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-left: 6px;
+    font-weight: 600;
+    font-size: 12px;
 }
 
 .footer-copyright {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
     text-align: center;
-    margin-top: 30px;
-    color: #888;
     font-size: 13px;
+    color: #475569;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bct-badge {
+    color: #ef4444;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* ================= ĐÁP ỨNG DI ĐỘNG (RESPONSIVE) ================= */
+@media (max-width: 768px) {
+    .footer-newsletter {
+        padding: 20px;
+    }
+    .newsletter-form {
+        max-width: 100%;
+    }
+    .footer-bottom-container, .footer-copyright {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .social-icon, .pay-badge {
+        margin: 0 5px;
+    }
 }

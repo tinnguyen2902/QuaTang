@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header th:fragment="header1(name1)" class="inter-header">
+    <div class="header-top-bar">
+        <div class="logo-box">[ LOGO WEB ]</div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Nhập tên quốc gia (Anh, Nhật, Hàn...) hoặc sản phẩm...">
+            <button type="button">Tìm kiếm</button>
+        </div>
+    </div>
+
+    <nav class="inter-nav">
+        <div class="nav-item">
+            <span class="nav-title">🔥 Sản phẩm được ưa chuộng ${name1}</span>
+            <div class="nav-tags">
+                <a href="#">Mỹ phẩm Hàn Quốc</a>
+                <a href="#">Bánh kẹo Nhật Bản</a>
+                <a href="#">Socola Bỉ</a>
+                <a href="#">Rượu vang Pháp</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <span class="nav-title">⭐ Shop được chọn lựa (Mall quốc tế)</span>
+            <div class="nav-tags">
+                <a href="#">Tokyo Gift Official</a>
+                <a href="#">Seoul Sweet Mall</a>
+                <a href="#">Paris Elegance Shop</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+</body>
+</html>

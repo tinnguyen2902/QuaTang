@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quà Tặng Trong Nước - Thương Hiệu Việt Cao Cấp</title>
+    <link rel="stylesheet" th:href="@{/css/domestic.css}">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/international.css}">
+</head>
+<body>
+
+<header th:replace="~{fragments/header1 :: header1('oke')}"></header>
+
+<main class="dom-main">
+
+    <section class="featured-products-section">
+        <div class="section-header">
+            <h2>🔥 Danh Mục Sản Phẩm Bán Chạy</h2>
+            <p>Những set quà tặng độc đáo, chất lượng cao được tuyển chọn nhiều nhất</p>
+        </div>
+
+        <div class="products-showcase-grid">
+            <div class="showcase-card">
+                <div class="badge-discount">Hot</div>
+                <div class="product-img-box">🎁</div>
+                <div class="product-details">
+                    <h3 class="product-title">Set Quà Tặng Trà Hoa Khô & Nến Thơm Tự Nhiên</h3>
+                    <p class="product-price-tag">450.000đ</p>
+                    <div class="product-actions">
+                        <a th:href="@{/pay}" class="btn-buy-now">Mua ngay</a>
+                        <a th:href="@{/product-detail}" class="btn-view-more">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <div class="product-img-box">🍷</div>
+                <div class="product-details">
+                    <h3 class="product-title">Hộp Quà Tết Cao Cấp Rượu Vang & Hạt Dinh Dưỡng</h3>
+                    <p class="product-price-tag">1.250.000đ</p>
+                    <div class="product-actions">
+                        <button type="button" class="btn-buy-now">Mua ngay</button>
+                        <a href="#" class="btn-view-more">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <div class="badge-discount">New</div>
+                <div class="product-img-box">🧸</div>
+                <div class="product-details">
+                    <h3 class="product-title">Combo Gấu Bông & Hoa Sáp Quà Tặng Sinh Nhật</h3>
+                    <p class="product-price-tag">320.000đ</p>
+                    <div class="product-actions">
+                        <button type="button" class="btn-buy-now">Mua ngay</button>
+                        <a href="#" class="btn-view-more">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <div class="product-img-box">☕</div>
+                <div class="product-details">
+                    <h3 class="product-title">Hộp Quà Cà Phê Phin Giấy & Ly Sứ Bát Tràng</h3>
+                    <p class="product-price-tag">550.000đ</p>
+                    <div class="product-actions">
+                        <button type="button" class="btn-buy-now">Mua ngay</button>
+                        <a href="#" class="btn-view-more">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ad-banner-section">
+        <div class="banner-split-container">
+
+            <div class="category-selection-side">
+                <h3>📦 Chọn Nhóm Sản Phẩm</h3>
+                <ul class="category-menu-list">
+                    <li class="category-item active" data-target="group-1">🎁 Set Quà Sức Khỏe Toàn Quốc</li>
+                    <li class="category-item" data-target="group-2">☕ Đặc Sản Trà & Cà Phê Việt</li>
+                    <li class="category-item" data-target="group-3">🏺 Gốm Sứ & Quà Tặng Thủ Công</li>
+                </ul>
+            </div>
+
+            <div class="product-detail-side">
+                <div id="group-1" class="content-panel active">
+                    <div class="product-preview">[ HÌNH ẢNH SET QUÀ SỨC KHỎE PREMIUM ]</div>
+                    <h4>💡 Hướng dẫn Set Quà Sức Khỏe Toàn Quốc:</h4>
+                    <p>Hộp quà bao gồm Yến Sào Khánh Hòa và Táo Đỏ Thượng Hạng. Đóng gói trong hộp gỗ lót lụa sang trọng...</p>
+                </div>
+
+                <div id="group-2" class="content-panel">
+                    <div class="product-preview">[ HÌNH ẢNH ĐẶC SẢN TRÀ & CÀ PHÊ ]</div>
+                    <h4>💡 Hướng dẫn Thưởng Thức Trà & Cà Phê:</h4>
+                    <p>Hộp quà tặng nông sản kết hợp Cà phê Legend và Trà cổ thụ...</p>
+                </div>
+
+                <div id="group-3" class="content-panel">
+                    <div class="product-preview">[ HÌNH ẢNH GỐM SỨ & ĐỒ THỦ CÔNG ]</div>
+                    <h4>💡 Hướng dẫn Bảo Quản Gốm Sứ Cao Cấp:</h4>
+                    <p>Bộ ấm chén Gốm sứ Minh Long cao cấp có họa tiết chỉ vàng tinh xảo...</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="festival-section">
+        <h2>🎉 Lễ Tiết & Mùa Quà Tặng Lớn Trong Năm</h2>
+        <div class="festival-grid">
+            <div class="festival-card">
+                <h4>🧧 Mùa Đầu Năm (Tháng 1 - 2)</h4>
+                <p><strong>Tết Nguyên Đán, Valentine:</strong> Mùa đoàn viên và tình yêu...</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<div th:replace="~{fragments/footer1 :: footer1}"></div>
+
+<script th:src="@{/js/banner-tabs.js}"></script>
+</body>
+</html>

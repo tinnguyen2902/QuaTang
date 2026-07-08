@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pay</title>
+    <link rel="stylesheet" th:href="@{/css/pay.css}">
+</head>
+<body>
+<div class="checkout-container">
+    <!-- CỘT TRÁI: THÔNG TIN GIAO HÀNG & THANH TOÁN -->
+    <div class="checkout-form-side">
+        <h2 class="section-title">📍 Thông tin giao hàng</h2>
+
+        <form id="checkout-form">
+            <!-- Nhập họ tên & Số điện thoại -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullname">Họ và tên *</label>
+                    <input type="text" id="fullname" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại *</label>
+                    <input type="tel" id="phone" placeholder="0901234567" required>
+                </div>
+            </div>
+
+            <!-- Địa chỉ Email -->
+            <div class="form-group">
+                <label for="email">Địa chỉ Email</label>
+                <input type="email" id="email" placeholder="nguyenvana@gmail.com">
+            </div>
+
+            <!-- Địa chỉ nhận hàng -->
+            <div class="form-group">
+                <label for="address">Địa chỉ chi tiết (Số nhà, tên đường...) *</label>
+                <input type="text" id="address" placeholder="123 Đường Nguyễn Huệ, Phường 1" required>
+            </div>
+
+            <!-- Ghi chú đơn hàng -->
+            <div class="form-group">
+                <label for="notes">Ghi chú đơn hàng</label>
+                <textarea id="notes" rows="3" placeholder="Lưu ý cho người giao hàng (ví dụ: giao giờ hành chính)..."></textarea>
+            </div>
+
+            <!-- PHƯƠNG THỨC THANH TOÁN -->
+            <h2 class="section-title" style="margin-top: 30px;">💳 Phương thức thanh toán</h2>
+            <div class="payment-methods">
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="cod" checked>
+                    <span class="custom-radio"></span>
+                    <div class="payment-text">
+                        <span class="method-name">Thanh toán khi nhận hàng (COD)</span>
+                        <p class="method-desc">Bạn sẽ thanh toán bằng tiền mặt khi shipper giao hàng đến.</p>
+                    </div>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="bank">
+                    <span class="custom-radio"></span>
+                    <div class="payment-text">
+                        <span class="method-name">Chuyển khoản ngân hàng (QR Code)</span>
+                        <p class="method-desc">Quét mã QR để chuyển khoản nhanh 24/7 qua ứng dụng ngân hàng.</p>
+                    </div>
+                </label>
+
+            </div>
+
+            <!-- Nút xác nhận thanh toán ở cuối form (Giao diện Mobile sẽ đẩy xuống dưới) -->
+            <button type="submit" class="btn-submit-order">🔒 Xác nhận đặt hàng</button>
+        </form>
+    </div>
+
+    <!-- CỘT PHẢI: TÓM TẮT ĐƠN HÀNG -->
+    <div class="checkout-summary-side">
+        <h2 class="summary-title">🛍️ Đơn hàng của bạn (3)</h2>
+
+        <!-- Danh sách sản phẩm mua -->
+        <div class="order-items-list">
+
+            <!-- Sản phẩm 1 -->
+            <div class="order-item">
+                <div class="item-img-placeholder">🎁</div>
+                <div class="item-details">
+                    <h4 class="item-name">Set Quà Sức Khỏe Premium</h4>
+                    <span class="item-qty">Số lượng: 1</span>
+                </div>
+                <span class="item-price">450.000đ</span>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div class="order-item">
+                <div class="item-img-placeholder">🍵</div>
+                <div class="item-details">
+                    <h4 class="item-name">Hộp Quà Saffron Nhụy Hoa</h4>
+                    <span class="item-qty">Số lượng: 2</span>
+                </div>
+                <span class="item-price">2.400.000đ</span>
+            </div>
+
+        </div>
+
+        <!-- Mã giảm giá (Coupon) -->
+        <div class="coupon-box">
+            <input type="text" placeholder="Nhập mã giảm giá (GIAM20...)">
+            <button type="button">Áp dụng</button>
+        </div>
+
+        <!-- Tính toán tổng tiền -->
+        <div class="price-calculations">
+            <div class="calc-row">
+                <span>Tạm tính:</span>
+                <span>2.850.000đ</span>
+            </div>
+            <div class="calc-row">
+                <span>Phí vận chuyển:</span>
+                <span class="shipping-fee">Miễn phí</span>
+            </div>
+            <div class="calc-row discount-row">
+                <span>Giảm giá mã ưu đãi:</span>
+                <span>-50.000đ</span>
+            </div>
+            <hr class="summary-divider">
+            <div class="calc-row total-row">
+                <span>Tổng cộng:</span>
+                <span class="final-total">2.800.000đ</span>
+            </div>
+        </div>
+
+        <div class="security-badge">
+            🛡️ Thông tin cá nhân của bạn luôn được bảo mật mã hóa an toàn tuyệt đối.
+        </div>
+    </div>
+</div>
+</body>
+</html>

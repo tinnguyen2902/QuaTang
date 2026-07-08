@@ -7,18 +7,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
     @GetMapping("home")
     public String home(){
-        return "home";
+        return "home/home";
     }
     @GetMapping("/international")
     public String internationalPage() {
-        return "international"; // Trả về file international.html trong templates
+        return "regions/international"; // Trả về file international.html trong templates
     }
     @GetMapping("/local")
     public String localPage() {
-        return "local"; // Trả về file local.html trong templates khi click vào banner địa phương
+        return "regions/local"; // Trả về file local.html trong templates khi click vào banner địa phương
     }
     @GetMapping("/domestic")
     public String domesticPage() {
-        return "domestic"; // Trả về file domestic.html trong thư mục templates
+        return "regions/domestic";// Trả về file domestic.html trong thư mục templates
+    }
+    @GetMapping("/pay")
+    public String showPayPage() {
+        return "pay/pay";
+    }
+    @GetMapping("/product-detail")
+    public String showProductDetailPage() {
+        return "product/product-detail";
     }
 }

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/product.css}">
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+<!--<main>-->
+<!--    <div class="breadcrumb">-->
+<!--        <a th:href="@{/static}">Trang chủ</a> >-->
+<!--        <a th:href="@{/products}">Quà sinh nhật</a> > -->
+<!--        <span>Tên sản phẩm mẫu</span>-->
+<!--    </div>-->
+
+<!--    <div class="product-detail-top">-->
+<!--        &lt;!&ndash; Cột trái: Ảnh sản phẩm &ndash;&gt;-->
+<!--        <div class="product-detail-left">-->
+<!--            <img src="https://via.placeholder.com/600" alt="Main Product Image" class="product-main-image">-->
+<!--            <div class="product-thumbnail-gallery">-->
+<!--                <img src="https://via.placeholder.com/150" alt="Thumb 1" class="product-thumbnail">-->
+<!--                <img src="https://via.placeholder.com/150" alt="Thumb 2" class="product-thumbnail">-->
+<!--                <img src="https://via.placeholder.com/150" alt="Thumb 3" class="product-thumbnail">-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Cột phải: Thông tin &ndash;&gt;-->
+<!--        <div class="product-detail-right">-->
+<!--            <h1 class="detail-title">Hộp Quà Âm Nhạc Gỗ Walnut</h1>-->
+<!--            <span class="detail-status">Còn hàng</span>-->
+<!--            <div class="detail-price">350,000 đ</div>-->
+<!--            <div class="detail-description-short">-->
+<!--                Hộp quà âm nhạc được làm từ gỗ walnut nguyên khối cao cấp. Phù hợp làm quà tặng sinh nhật, quà kỷ niệm ý nghĩa. Thiết kế tinh xảo, âm thanh trong trẻo.-->
+<!--            </div>-->
+
+<!--            <div class="detail-action-group">-->
+<!--                <div class="quantity-control">-->
+<!--                    <button type="button">-</button>-->
+<!--                    <input type="number" value="1" min="1" max="99">-->
+<!--                    <button type="button">+</button>-->
+<!--                </div>-->
+<!--                <button type="button" class="btn-add-to-cart-large">Thêm Vào Giỏ Hàng</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Tabs chi tiết &ndash;&gt;-->
+<!--    <div class="product-detail-tabs">-->
+<!--        <div class="tab-headers">-->
+<!--            <div class="tab-header active">Mô tả sản phẩm</div>-->
+<!--            <div class="tab-header">Đánh giá (5)</div>-->
+<!--        </div>-->
+<!--        <div class="tab-content">-->
+<!--            <p>Hộp quà âm nhạc gỗ được chế tác hoàn toàn thủ công. Mỗi chi tiết đều được chạm khắc tỉ mỉ...</p>-->
+<!--            <ul>-->
+<!--                <li>Kích thước: 15cm x 10cm x 10cm</li>-->
+<!--                <li>Chất liệu: Gỗ Walnut</li>-->
+<!--                <li>Bản nhạc: Cổ điển (Fur Elise)</li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Sản phẩm liên quan &ndash;&gt;-->
+<!--    <div class="related-products">-->
+<!--        <h2>Sản Phẩm Liên Quan</h2>-->
+<!--        <div class="product-grid">-->
+<!--            <div th:replace="~{fragments/product-card :: product-card(null)}"></div>-->
+<!--            <div th:replace="~{fragments/product-card :: product-card(null)}"></div>-->
+<!--            <div th:replace="~{fragments/product-card :: product-card(null)}"></div>-->
+<!--            <div th:replace="~{fragments/product-card :: product-card(null)}"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
+
+<main class="guide-main-container">
+    <nav class="breadcrumb">
+        <a href="#">Trang chủ</a> <span>/</span>
+        <a href="#">Sản phẩm quốc tế</a> <span>/</span>
+        <span class="active">Hướng dẫn chi tiết</span>
+    </nav>
+
+    <section class="product-intro-section">
+        <div class="product-gallery">
+            <div class="main-image">[ HÌNH ẢNH SẢN PHẨM CHÍNH ]</div>
+            <div class="thumb-images">
+                <div class="thumb-item active">[ Ảnh 1 ]</div>
+                <div class="thumb-item">[ Ảnh 2 ]</div>
+                <div class="thumb-item">[ Ảnh 3 ]</div>
+            </div>
+        </div>
+
+        <div class="product-short-info">
+            <span class="badge-category">Premium Gift</span>
+            <h1>Set Quà Sức Khỏe Cao Cấp Hoàng Gia</h1>
+            <p class="product-status">🟢 Tình trạng: <strong>Còn hàng</strong> | Mã: SP-2026</p>
+            <p class="short-description">
+                Sự kết hợp hoàn hảo giữa Yến Sào thiên nhiên Khánh Hòa, Đông Trùng Hạ Thảo nguyên con và mật ong rừng dã sinh. Món quà thượng hạng thể hiện sự trân quý dành cho đối tác và người thân.
+            </p>
+            <div class="action-box">
+                <a th:href="@{/pay}" class="btn-buy-now-detail">Đặt mua sản phẩm này</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-content-tabs">
+        <div class="tabs-wrapper">
+
+            <div class="guide-content-left">
+
+                <div class="guide-block">
+                    <h2>📖 Hướng dẫn sử dụng đúng cách</h2>
+                    <p>Để hấp thu trọn vẹn dưỡng chất quý giá từ set quà tặng sức khỏe, quý khách vui lòng tuân thủ theo các bước sử dụng tiêu chuẩn dưới đây:</p>
+                    <ol class="step-list">
+                        <li><strong>Bước 1 (Sơ chế nhẹ):</strong> Đối với yến sào nguyên tổ, ngâm trong nước sạch khoảng 20-30 phút cho tổ yến nở đều, sau đó dùng nhíp nhặt sạch lông kim còn sót lại.</li>
+                        <li><strong>Bước 2 (Chế biến):</strong> Cho yến vào thố chưng, đổ nước ngập yến. Chưng cách thủy trong vòng 20 phút dưới lửa nhỏ. Sau đó cho thêm đường phèn và vài lát gừng tươi, chưng thêm 5 phút rồi tắt bếp.</li>
+                        <li><strong>Bước 3 (Thưởng thức):</strong> Nên ăn vào buổi sáng sớm trước khi ăn sáng 30 phút hoặc buổi tối trước khi đi ngủ để cơ thể hấp thụ tốt nhất.</li>
+                    </ol>
+                </div>
+
+                <div class="guide-block">
+                    <h2>🏺 Cách bảo quản sản phẩm dài lâu</h2>
+                    <div class="warning-box">
+                        <p>⚠️ <strong>Lưu ý quan trọng:</strong> Sản phẩm hoàn toàn tự nhiên, không chứa chất bảo quản nên cần tuân thủ nghiêm ngặt điều kiện môi trường.</p>
+                    </div>
+                    <ul class="bullet-list">
+                        <li><strong>Tổ yến thô/tinh chế:</strong> Bảo quản tại nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp hoặc môi trường ẩm ướt. Sau khi bóc niêm phong, nên để trong hộp kín.</li>
+                        <li><strong>Mật ong rừng:</strong> Tuyệt đối không bảo quản trong tủ lạnh (gây hiện tượng kết tinh đường). Chỉ cần đậy kín nắp và để ở nhiệt độ phòng.</li>
+                        <li><strong>Đông trùng hạ thảo:</strong> Nên ưu tiên lưu trữ trong ngăn mát tủ lạnh để giữ được màu sắc và dược tính nguyên bản.</li>
+                    </ul>
+                </div>
+
+                <div class="guide-block">
+                    <h2>🎥 Video mở hộp & Trải nghiệm thực tế</h2>
+                    <p>Xem video clip hướng dẫn chi tiết cách khui hộp quà và cách chưng yến đường phèn thực tế từ chuyên gia dinh dưỡng.</p>
+                    <div class="video-container-placeholder">
+                        <div class="play-button">▶ BẤM XEM VIDEO CLIP REVIEW</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="specs-sidebar-right">
+                <div class="specs-card">
+                    <h3>📋 Thông số chi tiết</h3>
+                    <table class="specs-table">
+                        <tr>
+                            <td>Xuất xứ</td>
+                            <td>Việt Nam (Khánh Hòa)</td>
+                        </tr>
+                        <tr>
+                            <td>Trọng lượng</td>
+                            <td>1.5 kg (Cả hộp gỗ)</td>
+                        </tr>
+                        <tr>
+                            <td>Hạn sử dụng</td>
+                            <td>24 tháng kể từ ngày SX</td>
+                        </tr>
+                        <tr>
+                            <td>Đóng gói</td>
+                            <td>Hộp gỗ gõ đỏ sơn mài</td>
+                        </tr>
+                        <tr>
+                            <td>Chứng nhận</td>
+                            <td>ISO 22000 / ATVSTP</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="commit-card">
+                    <h4>🛡️ Cam kết từ cửa hàng</h4>
+                    <ul>
+                        <li>Phát hiện hàng giả đền 200%</li>
+                        <li>Đổi trả miễn phí trong 7 ngày</li>
+                        <li>Giao hàng hỏa tốc trong 2 giờ</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+<hr class="section-divider">
+
+<!--<footer th:replace="~{fragments/footer :: footer}"></footer>-->
+</body>
+</html>

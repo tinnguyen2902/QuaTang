@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh Sách Sản Phẩm</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/product.css}">
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+<main>
+    <div class="product-page-container">
+        <!-- Sidebar Filter -->
+        <aside class="product-sidebar">
+            <h3>Danh Mục</h3>
+            <div class="filter-group">
+                <label><input type="checkbox"> Quà sinh nhật</label>
+                <label><input type="checkbox"> Quà kỷ niệm</label>
+                <label><input type="checkbox"> Đồ lưu niệm văn phòng</label>
+            </div>
+
+            <h3>Mức Giá</h3>
+            <div class="filter-group">
+                <label><input type="radio" name="price"> Dưới 100k</label>
+                <label><input type="radio" name="price"> Từ 100k - 500k</label>
+                <label><input type="radio" name="price"> Trên 500k</label>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="product-grid-wrapper">
+            <h2 style="margin-top: 0;">Tất Cả Sản Phẩm</h2>
+            <div class="product-grid">
+                <!-- Hiển thị mockup các thẻ sản phẩm -->
+                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<hr class="section-divider">
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+</body>
+</html>

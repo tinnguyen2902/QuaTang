@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/product.css}">
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+<main>
+    <div class="breadcrumb">
+        <a th:href="@{/}">Trang chủ</a> > 
+        <a th:href="@{/products}">Quà sinh nhật</a> > 
+        <span>Tên sản phẩm mẫu</span>
+    </div>
+
+    <div class="product-detail-top">
+        <!-- Cột trái: Ảnh sản phẩm -->
+        <div class="product-detail-left">
+            <img src="https://via.placeholder.com/600" alt="Main Product Image" class="product-main-image">
+            <div class="product-thumbnail-gallery">
+                <img src="https://via.placeholder.com/150" alt="Thumb 1" class="product-thumbnail">
+                <img src="https://via.placeholder.com/150" alt="Thumb 2" class="product-thumbnail">
+                <img src="https://via.placeholder.com/150" alt="Thumb 3" class="product-thumbnail">
+            </div>
+        </div>
+
+        <!-- Cột phải: Thông tin -->
+        <div class="product-detail-right">
+            <h1 class="detail-title">Hộp Quà Âm Nhạc Gỗ Walnut</h1>
+            <span class="detail-status">Còn hàng</span>
+            <div class="detail-price">350,000 đ</div>
+            <div class="detail-description-short">
+                Hộp quà âm nhạc được làm từ gỗ walnut nguyên khối cao cấp. Phù hợp làm quà tặng sinh nhật, quà kỷ niệm ý nghĩa. Thiết kế tinh xảo, âm thanh trong trẻo.
+            </div>
+
+            <div class="detail-action-group">
+                <div class="quantity-control">
+                    <button type="button">-</button>
+                    <input type="number" value="1" min="1" max="99">
+                    <button type="button">+</button>
+                </div>
+                <button type="button" class="btn-add-to-cart-large">Thêm Vào Giỏ Hàng</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs chi tiết -->
+    <div class="product-detail-tabs">
+        <div class="tab-headers">
+            <div class="tab-header active">Mô tả sản phẩm</div>
+            <div class="tab-header">Đánh giá (5)</div>
+        </div>
+        <div class="tab-content">
+            <p>Hộp quà âm nhạc gỗ được chế tác hoàn toàn thủ công. Mỗi chi tiết đều được chạm khắc tỉ mỉ...</p>
+            <ul>
+                <li>Kích thước: 15cm x 10cm x 10cm</li>
+                <li>Chất liệu: Gỗ Walnut</li>
+                <li>Bản nhạc: Cổ điển (Fur Elise)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sản phẩm liên quan -->
+    <div class="related-products">
+        <h2>Sản Phẩm Liên Quan</h2>
+        <div class="product-grid">
+            <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+            <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+            <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+            <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+        </div>
+    </div>
+</main>
+
+<hr class="section-divider">
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+</body>
+</html>

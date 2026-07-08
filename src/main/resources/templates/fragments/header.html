@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<header th:fragment="header">
+    <div class="header-top">
+        <div class="logo-placeholder">
+            [ LOGO WEB ]
+        </div>
+
+        <div class="search-bar">
+            <select name="category" id="category">
+                <option value="">Tất cả danh mục</option>
+                <option value="sinh-nhat">Quà sinh nhật</option>
+                <option value="le-ky-niem">Quà kỷ niệm</option>
+                <option value="van-phong">Đồ lưu niệm văn phòng</option>
+            </select>
+            <input type="text" placeholder="Nhập tên sản phẩm cần tìm...">
+            <button type="button">Tìm kiếm</button>
+        </div>
+
+        <ul class="header-menu">
+            <li><a href="#khuyen-mai">🎟️ Mã khuyến mãi</a></li>
+            <li><a href="#thong-bao">🔔 Thông báo</a></li>
+            <li><a href="#yeu-thich">❤️ Sản phẩm yêu thích</a></li>
+            <li><a href="#gio-hang">🛒 Giỏ hàng</a></li>
+        </ul>
+    </div>
+
+    <div class="header-history">
+        <span><strong>Lịch sử tìm kiếm:</strong> Hộp quà gỗ, Nến thơm, Gấu bông...</span>
+        <span><a href="#lich-su-mua" class="history-link">🕒 Lịch sử mua hàng</a></span>
+    </div>
+</header>
+
+</body>
+</html>

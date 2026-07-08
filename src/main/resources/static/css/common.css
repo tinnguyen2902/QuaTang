@@ -1,0 +1,142 @@
+/* CSS Hệ thống & Thiết lập chung (Dùng chung cho mọi trang) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+header, main, footer {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-divider {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* ================= ĐỊNH DẠNG PHẦN ĐẦU (HEADER) ================= */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo-placeholder {
+    width: 150px;
+    height: 50px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+    font-weight: bold;
+}
+
+.search-bar {
+    flex-grow: 1;
+    max-width: 500px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.header-menu {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
+.header-history {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    gap: 20px;
+}
+
+.history-link {
+    color: #666;
+    text-decoration: none;
+}
+
+.history-link:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* ================= ĐỊNH DẠNG PHẦN KẾT (FOOTER) ================= */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    font-size: 13px;
+}

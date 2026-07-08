@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="product-card(productMock)" class="product-card">
+    <!-- Thumbnail placeholder nếu chưa có ảnh thật -->
+    <img src="https://via.placeholder.com/250" alt="Product Image" class="product-image">
+    
+    <div class="product-info">
+        <div class="product-category">Tên Danh Mục</div>
+        <h4 class="product-title">Tên Sản Phẩm Mẫu</h4>
+        <div class="product-price">250,000 đ</div>
+        <button class="btn-add-to-cart">Thêm vào giỏ</button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -3,39 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
     <link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
 <body>
-<header>
-    <div class="header-top">
-        <div class="logo-placeholder">
-            [ LOGO WEB ]
-        </div>
-
-        <div class="search-bar">
-            <select name="category" id="category">
-                <option value="">Tất cả danh mục</option>
-                <option value="sinh-nhat">Quà sinh nhật</option>
-                <option value="le-ky-niem">Quà kỷ niệm</option>
-                <option value="van-phong">Đồ lưu niệm văn phòng</option>
-            </select>
-            <input type="text" placeholder="Nhập tên sản phẩm cần tìm...">
-            <button type="button">Tìm kiếm</button>
-        </div>
-
-        <ul class="header-menu">
-            <li><a href="#khuyen-mai">🎟️ Mã khuyến mãi</a></li>
-            <li><a href="#thong-bao">🔔 Thông báo</a></li>
-            <li><a href="#yeu-thich">❤️ Sản phẩm yêu thích</a></li>
-            <li><a href="#gio-hang">🛒 Giỏ hàng</a></li>
-        </ul>
-    </div>
-
-    <div class="header-history">
-        <span><strong>Lịch sử tìm kiếm:</strong> Hộp quà gỗ, Nến thơm, Gấu bông...</span>
-        <span><a href="#lich-su-mua" class="history-link">🕒 Lịch sử mua hàng</a></span>
-    </div>
-</header>
+<header th:replace="~{fragments/header :: header}"></header>
 
 <hr class="section-divider">
 
@@ -72,48 +44,6 @@
 
 <hr class="section-divider">
 
-<footer>
-    <div class="footer-grid">
-        <div class="footer-section" id="khuyen-mai">
-            <h3>Khuyến Mãi Hot</h3>
-            <ul>
-                <li>💥 Giảm ngay 10% cho đơn hàng đầu tiên.</li>
-                <li>🚚 Freeship cho đơn hàng từ 500k.</li>
-                <li>🎂 Quà tặng đặc biệt trong tháng sinh nhật của bạn.</li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Hướng Dẫn</h3>
-            <ul>
-                <li><a href="#">Cách thức mua hàng & thanh toán</a></li>
-                <li><a href="#">Chính sách đổi trả quà tặng</a></li>
-                <li><a href="#">Kiểm tra tình trạng đơn hàng</a></li>
-                <li><a href="#">Câu hỏi thường gặp (FAQ)</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Shop Uy Tín Doanh Thu Lớn</h3>
-            <ul>
-                <li>🏆 <strong>Quà Tặng Yêu Thương Store</strong> (Top 1 Toàn quốc)</li>
-                <li>🥈 <strong>Handmade & Vintage Gift</strong> (Top Đồ thủ công)</li>
-                <li>🥉 <strong>Luxury Flower & Gift</strong> (Top Quà tặng cao cấp)</li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Thông Tin Liên Hệ</h3>
-            <p><strong>Website Quà Tặng</strong></p>
-            <p>📍 Địa chỉ: 123 Đường ABC, Quận 1, TP. Hồ Chí Minh</p>
-            <p>📞 Hotline: 1900 xxxx (8h00 - 21h00)</p>
-            <p>✉️ Email: hotro@quatang.com</p>
-        </div>
-    </div>
-
-    <div class="footer-copyright">
-        © 2026 Giao diện Trang chủ Web Quà Tặng. All rights reserved.
-    </div>
-</footer>
+<footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

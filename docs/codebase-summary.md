@@ -10,7 +10,7 @@ QuaTang/
 ├── src/
 │   ├── main/
 │   │   ├── java/com/example/quatang/
-│   │   │   ├── config/       # Cấu hình Spring Security
+│   │   │   ├── config/       # Cấu hình Spring Security, Database
 │   │   │   ├── controller/   # Web layer (xử lý request, trả về template)
 │   │   │   ├── dto/          # Data Transfer Objects
 │   │   │   ├── entity/       # JPA Entities đại diện cho DB tables (Category, Product, User, Order...)
@@ -19,9 +19,11 @@ QuaTang/
 │   │   │   └── service/      # Business logic layer
 │   │   └── resources/
 │   │       ├── application.properties  # Database, JPA, App config
+│   │       ├── db/migration/ # Các script Flyway tự động khởi tạo bảng và dữ liệu mẫu
 │   │       ├── static/css/   # CSS styles (home.css, local.css...)
 │   │       └── templates/    # HTML pages sử dụng Thymeleaf
 ├── docs/                     # Tài liệu thiết kế và kiến trúc dự án
+├── .env.example              # Mẫu file biến môi trường cho database kết nối TiDB Cloud
 └── plans/                    # Kế hoạch triển khai chia theo Phase
 ```
 

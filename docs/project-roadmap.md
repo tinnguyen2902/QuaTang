@@ -7,7 +7,8 @@ Dự án phát triển nền tảng thương mại điện tử QuaTang được
 - Định nghĩa Database Schema (ERD).
 - Khởi tạo JPA Entities & Repositories.
 - Tích hợp các dependencies cần thiết (JPA, Security, Validation).
-- Cấu hình Flyway Migration & Baseline Data.
+- Cấu hình kết nối TiDB Cloud qua file `.env`.
+- Cấu hình Flyway Migration & Baseline Data tự động.
 
 ## Phase 2: Product Listing & Detail (🔲 Planned)
 - Xây dựng layout Master/Fragment bằng Thymeleaf.
@@ -45,4 +46,3 @@ Dự án phát triển nền tảng thương mại điện tử QuaTang được
 - Tách file cấu hình `application-prod.properties`.
 - Viết `Dockerfile` (tùy chọn).
 - Triển khai miễn phí lên Railway.app.
-- Kết nối với MySQL trên Cloud.

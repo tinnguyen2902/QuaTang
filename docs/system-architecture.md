@@ -19,8 +19,9 @@ Hệ thống QuaTang được xây dựng trên nền tảng **Java Spring Boot*
 - **Data Access (Repositories)**: Spring Data JPA kết nối CSDL, đóng gói các câu lệnh SQL dưới dạng OOP.
 
 ### 2.4. Database
-- **MySQL 8.0**: Lưu trữ toàn bộ dữ liệu cấu trúc (Categories, Products, Users, Orders, Reviews).
+- **TiDB Cloud (MySQL 8.0 Compatible)**: Lưu trữ toàn bộ dữ liệu cấu trúc (Categories, Products, Users, Orders, Reviews).
 - Sử dụng Hibernate ORM để map Entity Class với Database Table.
+- Sử dụng **Flyway** để quản lý versioning schema và tự động khởi tạo dữ liệu mẫu (Baseline Data) khi khởi chạy ứng dụng. Cấu hình kết nối được quản lý bảo mật qua biến môi trường (`.env`).
 
 ## 3. Kiến trúc Bảo Mật (Security)
 - Sử dụng **Session-Based Authentication** với Cookie `JSESSIONID`.

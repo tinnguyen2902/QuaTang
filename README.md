@@ -32,5 +32,13 @@ Sau khi ứng dụng khởi chạy thành công, bạn có thể kiểm tra xem 
 2. Truy cập vào địa chỉ: [http://localhost:8080/test-db](http://localhost:8080/test-db)
 3. Giao diện sẽ hiển thị trạng thái kết nối và danh sách các sản phẩm mẫu nếu kết nối thành công.
 
+### Run command
+```bash
+./gradlew bootRun
+```
+
+### Homepage
+http://localhost:8080/home
+
 ## Tài Liệu
 Xem thêm chi tiết tại thư mục `docs/`.

@@ -32,15 +32,20 @@
         <section class="product-grid-wrapper">
             <h2 style="margin-top: 0;">Tất Cả Sản Phẩm</h2>
             <div class="product-grid">
-                <!-- Hiển thị mockup các thẻ sản phẩm -->
-                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
-                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
-                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
-                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
-                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
-                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
-                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
-                <div th:replace="~{fragments/product-card :: product-card(null)}"></div>
+                <div th:each="product : ${products.content}"
+                     th:replace="~{fragments/product-card :: product-card(${product})}">
+                </div>
+                <!-- Empty state -->
+                <div th:if="${products.empty}" style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                    <p>Chưa có sản phẩm nào.</p>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="pagination" th:if="${products.totalPages > 1}">
+                <a th:each="i : ${#numbers.sequence(0, products.totalPages - 1)}"
+                   th:href="@{/products(page=${i})}"
+                   th:text="${i + 1}"
+                   th:classappend="${i == currentPage} ? ' active' : ''">1</a>
             </div>
         </section>
     </div>

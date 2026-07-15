@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<div th:fragment="product-card(productMock)" class="product-card">
-    <!-- Thumbnail placeholder nếu chưa có ảnh thật -->
-    <img src="https://via.placeholder.com/250" alt="Product Image" class="product-image">
-    
+<div th:fragment="product-card(product)" class="product-card">
+    <img th:src="${product?.imageUrl ?: 'https://via.placeholder.com/250'}"
+         th:alt="${product?.name ?: 'Sản phẩm'}"
+         class="product-image">
     <div class="product-info">
-        <div class="product-category">Tên Danh Mục</div>
-        <h4 class="product-title">Tên Sản Phẩm Mẫu</h4>
-        <div class="product-price">250,000 đ</div>
-        <button class="btn-add-to-cart">Thêm vào giỏ</button>
+        <div class="product-category"
+             th:text="${product?.category?.name ?: 'Quà Tặng'}">Tên Danh Mục</div>
+        <h4 class="product-title"
+            th:text="${product?.name ?: 'Tên Sản Phẩm'}">Tên Sản Phẩm Mẫu</h4>
+        <div class="product-price"
+             th:text="${#numbers.formatDecimal(product?.price ?: 0, 1, 'COMMA', 0, 'POINT')} + ' đ'">
+            250,000 đ
+        </div>
+        <a th:href="@{/products/{id}(id=${product?.id})}" class="btn-add-to-cart">Xem chi tiết</a>
     </div>
 </div>
 

@@ -7,6 +7,10 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.example.quatang.entity.enums.RegionType;
 
 @Entity
 @Table(name = "products")
@@ -43,6 +47,16 @@ public class Product {
     @Builder.Default
     @Column(name = "is_active", nullable = false)
     private Boolean isActive = true;
+
+    @ElementCollection(targetClass = RegionType.class, fetch = FetchType.LAZY)
+    @CollectionTable(
+        name = "product_regions",
+        joinColumns = @JoinColumn(name = "product_id")
+    )
+    @Enumerated(EnumType.STRING)
+    @Column(name = "region")
+    @Builder.Default
+    private Set<RegionType> regions = new HashSet<>();
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)

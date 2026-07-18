@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <!-- Đường dẫn tĩnh chuẩn cấu trúc thư mục Spring Boot / Thymeleaf -->
+    <link rel="stylesheet" th:href="@{/css/seller/seller.css}"/>
+</head>
+<body>
+<div class="phone-container">
+    <div class="app-header">
+        <div class="shop-avatar">TD</div>
+        <div class="shop-info">
+            <h3>TD Nuts ▾</h3>
+            <p>[VN] tdnuts</p>
+        </div>
+        <div class="header-icons">🔍 🔔</div>
+        <button class="btn-logout">Đăng xuất</button>
+    </div>
+
+    <!-- 2. SCREEN CONTENT (Chỉ chứa nội dung cuộn của trang) -->
+    <div class="screen-content">
+
+        <!-- Ma trận công việc -->
+        <div class="todo-matrix">
+            <div class="matrix-item">
+                <div class="num">0</div>
+                <div class="label">Chờ lấy hàng</div>
+            </div>
+            <div class="matrix-item">
+                <div class="num">0</div>
+                <div class="label">Đơn hủy</div>
+            </div>
+            <div class="matrix-item">
+                <div class="num">0</div>
+                <div class="label">Trả hàng/Hoàn tiền</div>
+            </div>
+            <div class="matrix-item">
+                <div class="num">0</div>
+                <div class="label">Phản hồi Đánh giá</div>
+            </div>
+        </div>
+
+        <!-- Lưới menu tiện ích -->
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="icon-box" style="background: #e3f2fd; color: #1e88e5" th:onclick="|window.location.href='@{/san-pham}'|">📦</div>
+                <p>Sản phẩm</p>
+            </div>
+            <div class="menu-item">
+                <div class="icon-box" style="background: #fff3e0; color: #fb8c00" th:onclick="|window.location.href='@{/don-hang}'|">📋</div>
+                <p>Đơn hàng</p>
+            </div>
+            <div class="menu-item">
+                <div class="icon-box" style="background: #e8f5e9; color: #43a047">💰</div>
+                <p>Tài chính</p>
+            </div>
+            <div class="menu-item" th:onclick="|window.location.href='@{/hieu-qua}'|">
+                <div class="icon-box">📊</div>
+                <p>Hiệu quả</p>
+            </div>
+        </div>
+
+        <!-- Gợi ý kinh doanh -->
+        <div class="business-insight-card">
+            <h4>Gợi ý Kinh Doanh</h4>
+            <div class="insight-box">
+                <strong>Bật tính năng Nạp Tiền Tự Động</strong>
+                <p class="insight-desc">
+                    Ước tính doanh số tăng trưởng
+                    <span class="highlight-text">+20%</span>
+                </p>
+                <button class="btn-orange">Áp dụng Cài đặt</button>
+                <div class="clear-fix"></div>
+            </div>
+        </div>
+
+    </div> <!-- ĐÓNG THẺ screen-content -->
+
+    <!-- 3. BOTTOM NAV (Đã đưa ra ngoài để cố định ở đáy web app) -->
+    <div class="bottom-nav">
+        <div class="nav-item active">
+            <span class="nav-icon">🏠</span>Trang chủ
+        </div>
+        <div class="nav-item"><span class="nav-icon">💬</span>Trò chuyện</div>
+        <div class="nav-item"><span class="nav-icon">📈</span>Tiếp thị</div>
+        <div class="nav-item"><span class="nav-icon">👤</span>Tôi</div>
+    </div>
+
+</div> <!-- ĐÓNG THẺ phone-container -->
+</body>
+</html>

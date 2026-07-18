@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản Lý Đơn Hàng - TD Nuts</title>
+  <!-- Đường dẫn tĩnh chuẩn cấu trúc thư mục Spring Boot / Thymeleaf -->
+  <link rel="stylesheet" th:href="@{/css/seller/seller.css}" />
+</head>
+<body>
+<div class="phone-container">
+
+  <!-- 1. APP HEADER -->
+  <div class="app-header">
+    <span th:onclick="|window.location.href='@{/admin}'|">←</span>
+    <div class="header-title">Quản lý đơn hàng</div>
+    <div class="header-icons">🔍 💬</div>
+  </div>
+
+  <!-- 2. SUB TABS -->
+  <div class="sub-tabs">
+    <div class="sub-tab-item">Đang giao</div>
+    <div class="sub-tab-item active">Đã giao</div>
+    <div class="sub-tab-item">Đơn hủy</div>
+  </div>
+
+  <!-- 3. SCREEN CONTENT -->
+  <div class="screen-content">
+
+    <!-- Đơn hàng 1 -->
+    <div class="order-card">
+      <div class="order-header">
+        <span class="buyer-name">👤 rub2y8</span>
+        <span class="order-status completed">Đã giao</span>
+      </div>
+      <div class="product-info">
+        <div class="product-img">🥜</div>
+        <div class="product-detail">
+          <div class="product-title">
+            TD Nuts Combo Cao Cấp: Hạt Macca Nứt Vỏ, Hạt Điều Vị Muối...
+          </div>
+          <div class="product-quantity">x 1</div>
+        </div>
+        <div class="product-price">₫266.000</div>
+      </div>
+      <div class="order-total">
+        2 sản phẩm. Tổng Thanh toán: <span class="total-price">₫216.000</span>
+      </div>
+      <div class="order-actions">
+        <span class="order-id">Mã đơn hàng: #2602086X7FV62J</span>
+        <button class="btn-outline">Xem đánh giá Shop</button>
+      </div>
+    </div>
+
+    <!-- Đơn hàng 2 -->
+    <div class="order-card">
+      <div class="order-header">
+        <span class="buyer-name">👤 tk8zp2xp27</span>
+        <span class="order-status completed">Đã giao</span>
+      </div>
+      <div class="product-info">
+        <div class="product-img">🎁</div>
+        <div class="product-detail">
+          <div class="product-title">
+            Hộp quà tết Cánh Én Báo Xuân - TD Nuts Hạt Dinh Dưỡng
+          </div>
+          <div class="product-quantity">x 1</div>
+        </div>
+        <div class="product-price">₫382.720</div>
+      </div>
+      <div class="order-total">
+        1 sản phẩm. Tổng Thanh toán: <span class="total-price">₫311.662</span>
+      </div>
+      <div class="order-actions">
+        <span class="order-id">Mã đơn hàng: #26020607RNPCF0</span>
+        <button class="btn-outline">Xem chi tiết</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 4. BOTTOM NAV -->
+  <div class="bottom-nav">
+    <div class="nav-item active" th:onclick="|window.location.href='@{/admin}'|">
+      <span class="nav-icon">🏠</span>Trang chủ
+    </div>
+    <div class="nav-item"><span class="nav-icon">💬</span>Trò chuyện</div>
+    <div class="nav-item"><span class="nav-icon">📈</span>Tiếp thị</div>
+    <div class="nav-item"><span class="nav-icon">👤</span>Tôi</div>
+  </div>
+
+</div>
+</body>
+</html>

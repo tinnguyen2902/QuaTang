@@ -58,4 +58,21 @@ public class HomeController {
     public String showProductDetailPage() {
         return "product/product-detail";
     }
+    @GetMapping({"/admin"})
+    public String viewHomePage() {
+        return "seller/sellerHome1";
+    }
+    @GetMapping("/hieu-qua")
+    public String getHome2() {
+        return "seller/sellerHome2";
+    }
+    @GetMapping("/don-hang")
+    public String getHome3() {
+        return "seller/sellerHome3";
+    }
+
+    @GetMapping("/san-pham")
+    public String getHome4() {
+        return "seller/sellerHome4";
+    }
 }

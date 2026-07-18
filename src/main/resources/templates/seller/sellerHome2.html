@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="/css/seller/seller.css" />
+</head>
+<body>
+<!-- sau khi ấn vào hiệu quả ở home1 ra màn hình này -->
+<div class="phone-container">
+  <div class="app-header">
+    <span th:onclick="|window.location.href='@{/admin}'|">←</span>
+    <div class="header-title">Hiệu quả bán hàng</div>
+  </div>
+  <div class="sub-tabs">
+    <div class="sub-tab-item active">Doanh số</div>
+    <div class="sub-tab-item">Hiệu quả sản phẩm</div>
+  </div>
+
+  <div class="screen-content">
+    <div class="time-filter">
+      <div class="filter-header">
+        <span>Khung thời gian 08:12 (GMT+7)</span>
+        <span class="filter-dropdown">Đơn đã xác nhận ▾</span>
+      </div>
+      <div class="filter-tags">
+        <div class="tag active">Hôm nay</div>
+        <div class="tag">Hôm qua</div>
+        <div class="tag">Trong 7 ngày qua</div>
+      </div>
+    </div>
+
+    <div class="section-title">Tổng quan</div>
+    <div class="overview-grid">
+      <div class="stat-card active">
+        <p>Doanh số</p>
+        <h4>₫0</h4>
+        <p class="trend-line">-</p>
+      </div>
+      <div class="stat-card">
+        <p>Đơn hàng</p>
+        <h4>0</h4>
+        <p class="trend-line">-</p>
+      </div>
+      <div class="stat-card">
+        <p>Người mua</p>
+        <h4>0</h4>
+        <p class="trend-line">-</p>
+      </div>
+      <div class="stat-card">
+        <p>Tỷ lệ chuyển đổi</p>
+        <h4>0%</h4>
+        <p class="trend-line">-</p>
+      </div>
+    </div>
+
+    <div class="chart-placeholder">
+      <div class="chart-line"><div class="chart-dot"></div></div>
+    </div>
+  </div>
+  <div class="bottom-nav">
+    <div class="nav-item active">
+      <span class="nav-icon">🏠</span>Trang chủ
+    </div>
+    <div class="nav-item"><span class="nav-icon">💬</span>Trò chuyện</div>
+    <div class="nav-item"><span class="nav-icon">📈</span>Tiếp thị</div>
+    <div class="nav-item"><span class="nav-icon">👤</span>Tôi</div>
+  </div>
+</div>
+
+</body>
+</html>
